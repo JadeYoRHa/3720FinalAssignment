@@ -5,3 +5,19 @@ body {
     -o-background-size: cover;
     background-size: cover;
 }
+
+body, html {
+    overflow: hidden;
+}
+
+#drop_zone {
+    width: 100%;
+    height: 100vh;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
