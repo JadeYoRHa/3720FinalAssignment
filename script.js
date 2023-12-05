@@ -48,7 +48,7 @@ dropZone.ondrop = function (event) {
 		let dx = (window.innerWidth / 2 - sphere.offsetWidth / 2) - x;
 		let dy = (window.innerHeight / 2 - sphere.offsetHeight / 2) - y;
 
-		// Animate the sphere towards the center of the window, shrink it until it becomes invisible, and make it stretch
+		// Animate the sphere towards the center of the window, shrink it until it becomes invisible
 		gsap.to(sphere, {
 			x: `+=${dx}`,
 			y: `+=${dy}`,
