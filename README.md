@@ -12,3 +12,5 @@ I landed on the idea of sending news articles and bits of information into the b
 
 This is also a form of commentary on how fast the news will move on from any type of story that comes up, no matter how serious or unserious the matter being written about may be.
 This is a very conceptual piece so I hope people find their own interpretations of what it means for themselves.
+
+I used gsap libraries to achieve the animations used in the website, the libraries documentation was all right however I found myself often looking to youtube tutorials to help myself understand how to use the library as well as slides from class, I also used AI to help explain and build the implementations of the library so that I could get it to look how I wanted in the end.
