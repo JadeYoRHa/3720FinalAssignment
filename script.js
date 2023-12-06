@@ -57,3 +57,208 @@ dropZone.ondrop = function (event) {
 		});
 	}
 };
+
+// Headline Shake
+
+let tl = gsap.timeline({ repeat: -1 });
+let tl2 = gsap.timeline({ repeat: -1 });
+let tl3 = gsap.timeline({ repeat: -1 });
+let tl4 = gsap.timeline({ repeat: -1 });
+
+
+tl.to(".TLeft", {
+	x: "random(-2, 2)",
+	y: "random(-2, 2)",
+	duration: 0.1,
+	repeat: 5,
+	yoyo: true
+})
+	.to(".TLeft", {
+		x: "random(-5, 5)",
+		y: "random(-5, 5)",
+		duration: 0.1,
+		repeat: 5,
+		yoyo: true
+	})
+	.to(".TLeft", {
+		x: "random(-10, 10)",
+		y: "random(-10, 10)",
+		duration: 0.1,
+		repeat: 5,
+		yoyo: true
+	});
+
+tl2.to(".BLeft", {
+	x: "random(-2, 2)",
+	y: "random(-2, 2)",
+	duration: 0.1,
+	repeat: 5,
+	yoyo: true
+})
+	.to(".BLeft", {
+		x: "random(-5, 5)",
+		y: "random(-5, 5)",
+		duration: 0.1,
+		repeat: 5,
+		yoyo: true
+	})
+	.to(".BLeft", {
+		x: "random(-10, 10)",
+		y: "random(-10, 10)",
+		duration: 0.1,
+		repeat: 5,
+		yoyo: true
+	});
+
+tl3.to(".TRight", {
+	x: "random(-2, 2)",
+	y: "random(-2, 2)",
+	duration: 0.1,
+	repeat: 5,
+	yoyo: true
+})
+	.to(".TRight", {
+		x: "random(-5, 5)",
+		y: "random(-5, 5)",
+		duration: 0.1,
+		repeat: 5,
+		yoyo: true
+	})
+	.to(".TRight", {
+		x: "random(-10, 10)",
+		y: "random(-10, 10)",
+		duration: 0.1,
+		repeat: 5,
+		yoyo: true
+	});
+
+tl4.to(".BRight", {
+	x: "random(-2, 2)",
+	y: "random(-2, 2)",
+	duration: 0.1,
+	repeat: 5,
+	yoyo: true
+})
+	.to(".BRight", {
+		x: "random(-5, 5)",
+		y: "random(-5, 5)",
+		duration: 0.1,
+		repeat: 5,
+		yoyo: true
+	})
+	.to(".BRight", {
+		x: "random(-10, 10)",
+		y: "random(-10, 10)",
+		duration: 0.1,
+		repeat: 5,
+		yoyo: true
+	});
+
+// Wait for 5 seconds after the tab becomes active
+setTimeout(() => {
+	// Get the .TLeft element
+	let box = document.querySelector('.TLeft');
+
+	// Calculate the target position
+	let targetX = window.innerWidth / 2 - box.offsetWidth / 2;
+	let targetY = window.innerHeight / 2 - box.offsetHeight / 2;
+
+	// Calculate the distance to move
+	let moveX = targetX - box.getBoundingClientRect().left;
+	let moveY = targetY - box.getBoundingClientRect().top;
+
+	// Animate the box moving to the center of the window while rotating and shrinking
+	gsap.to(box, {
+		x: `+=${moveX}`,
+		y: `+=${moveY}`,
+		scale: 0,
+		rotate: 360,
+		duration: 0.75,
+		onComplete: function () {
+			tl.pause(); // Pause the timeline
+		}
+	});
+}, 5000);
+
+// Wait for 10 seconds after the tab becomes active
+setTimeout(() => {
+	// Get the .BLeft element
+	let box = document.querySelector('.BLeft');
+
+	// Calculate the target position
+	let targetX = window.innerWidth / 2 - box.offsetWidth / 2;
+	let targetY = window.innerHeight / 2 - box.offsetHeight / 2;
+
+	// Calculate the distance to move
+	let moveX = targetX - box.getBoundingClientRect().left;
+	let moveY = targetY - box.getBoundingClientRect().top;
+
+	// Animate the box moving to the center of the window while rotating and shrinking
+	gsap.to(box, {
+		x: `+=${moveX}`,
+		y: `+=${moveY}`,
+		scale: 0,
+		rotate: 360,
+		duration: 0.75,
+		onComplete: function () {
+			tl2.pause(); // Pause the timeline
+		}
+	});
+}, 10000);
+
+// Wait for 15 seconds after the tab becomes active
+setTimeout(() => {
+	// Get the .TRight element
+	let box = document.querySelector('.TRight');
+
+	// Calculate the target position
+	let targetX = window.innerWidth / 2 - box.offsetWidth / 2;
+	let targetY = window.innerHeight / 2 - box.offsetHeight / 2;
+
+	// Calculate the distance to move
+	let moveX = targetX - box.getBoundingClientRect().left;
+	let moveY = targetY - box.getBoundingClientRect().top;
+
+	// Animate the box moving to the center of the window while rotating and shrinking
+	gsap.to(box, {
+		x: `+=${moveX}`,
+		y: `+=${moveY}`,
+		scale: 0,
+		rotate: 360,
+		duration: 0.75,
+		onComplete: function () {
+			tl3.pause(); // Pause the timeline
+		}
+	});
+}, 15000);
+
+// Wait for 20 seconds after the tab becomes active
+setTimeout(() => {
+	// Get the .BRight element
+	let box = document.querySelector('.BRight');
+
+	// Calculate the target position
+	let targetX = window.innerWidth / 2 - box.offsetWidth / 2;
+	let targetY = window.innerHeight / 2 - box.offsetHeight / 2;
+
+	// Calculate the distance to move
+	let moveX = targetX - box.getBoundingClientRect().left;
+	let moveY = targetY - box.getBoundingClientRect().top;
+
+	// Animate the box moving to the center of the window while rotating and shrinking
+	gsap.to(box, {
+		x: `+=${moveX}`,
+		y: `+=${moveY}`,
+		scale: 0,
+		rotate: 360,
+		duration: 0.75,
+		onComplete: function () {
+			tl4.pause(); // Pause the timeline
+		}
+	});
+}, 20000);
+
+// Wait for 30 seconds after the tab becomes active and then close the tab
+setTimeout(() => {
+	window.close();
+}, 30000);

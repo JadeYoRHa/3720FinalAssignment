@@ -11,11 +11,21 @@ html {
     overflow: hidden;
 }
 
-/* Article Boxes and Fonts */
-.box {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 2vw;
+.box .main-text {
     font-weight: bold;
+    padding-top: 10px;
+    margin: 0%;
+}
+
+.box .subtext {
+    font-weight: normal;
+    font-size: 0.75vw;
+}
+
+/* Article Boxes and Fonts */
+.TLeft {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1vw;
     text-align: center;
     width: 20vw;
     height: 20vh;
@@ -25,10 +35,9 @@ html {
     left: 0;
 }
 
-.box2 {
+.BLeft {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 2vw;
-    font-weight: bold;
+    font-size: 1vw;
     text-align: center;
     width: 20vw;
     height: 20vh;
@@ -38,10 +47,9 @@ html {
     left: 0;
 }
 
-.box3 {
+.TRight {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 2vw;
-    font-weight: bold;
+    font-size: 1vw;
     text-align: center;
     width: 20vw;
     height: 20vh;
@@ -51,10 +59,9 @@ html {
     right: 0;
 }
 
-.box4 {
+.BRight {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 2vw;
-    font-weight: bold;
+    font-size: 1vw;
     text-align: center;
     width: 20vw;
     height: 20vh;
