@@ -154,6 +154,7 @@ tl4.to(".BRight", {
 		yoyo: true
 	});
 
+// Timers
 // Wait for 5 seconds after the tab becomes active
 setTimeout(() => {
 	// Get the .TLeft element

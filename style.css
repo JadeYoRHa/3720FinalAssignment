@@ -8,20 +8,30 @@ body {
 
 body,
 html {
-    overflow: hidden;
+    overflow:hidden;
+}
+
+.box {
+    background-color: white;
+    padding: 20px;
+    overflow: auto; /* Add a scrollbar when the content overflows */
+}
+
+.box .main-text, .box .subtext {
+    word-wrap: break-word; /* Break words onto the next line */
+    margin: 0; /* Remove default margins */
+    text-overflow: ellipsis; /* Add an ellipsis when the text overflows */
 }
 
 .box .main-text {
+    font-size: 24px;
     font-weight: bold;
-    padding-top: 10px;
-    margin: 0%;
 }
 
 .box .subtext {
-    font-weight: normal;
-    font-size: 0.75vw;
+    font-size: 16px;
+    text-align: justify;
 }
-
 /* Article Boxes and Fonts */
 .TLeft {
     font-family: 'Times New Roman', Times, serif;
@@ -81,4 +91,5 @@ html {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: -1;
 }
